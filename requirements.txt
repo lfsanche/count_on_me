@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+ipython
+jupyter
+stata_setup
+fasthdfe>=0.1.0

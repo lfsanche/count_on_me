@@ -1,0 +1,6 @@
+# files the notebook creates
+data/corrected/FINAL_SAMPLE_UPDATED_v2.dta
+data/corrected/TOREG_UPDATED_v2.dta
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
