@@ -1,0 +1,41 @@
+\begin{table}[!htbp]
+\renewcommand{\arraystretch}{0.95}
+\centering
+\setstretch{1}
+\caption{Colussi's Table 3 estimated in Python}
+\label{tab:python}
+\footnotesize
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+ & \multicolumn{2}{c}{OLS, original data} & \multicolumn{2}{c}{OLS, corrected data} & \multicolumn{2}{c}{PPML, corrected data} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & $\hat\beta$ & s.e. & $\hat\beta$ & s.e. & $\hat\beta$ & s.e. \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Number of articles}} \\[2pt]
+\quad Pooled & 0.2419* & (0.1324) & 0.2383* & (0.1312) & 0.0537* & (0.0318) \\
+\quad Same Faculty & 0.2670** & (0.1009) & 0.2571** & (0.1001) & 0.0836** & (0.0328) \\
+\quad Ph.D. Advisor & 0.1456* & (0.0750) & 0.1604** & (0.0769) & 0.2186*** & (0.0594) \\
+\quad Same Ph.D. & -0.0570 & (0.0749) & -0.0691 & (0.0753) & -0.0761 & (0.1195) \\
+\quad Co-author & 0.0463 & (0.0555) & 0.0504 & (0.0550) & 0.1738 & (0.1633) \\
+\quad Same Field & 0.0704 & (0.0889) & 0.0829 & (0.0895) & 0.0426 & (0.0616) \\[3pt]
+\multicolumn{7}{l}{\textit{B. Number of pages}} \\[2pt]
+\quad Pooled & 10.9883** & (4.2903) & 10.3960** & (4.2233) & 0.0830** & (0.0380) \\
+\quad Same Faculty & 10.2054*** & (3.2978) & 10.0242*** & (3.2868) & 0.1153*** & (0.0373) \\
+\quad Ph.D. Advisor & 6.0008** & (2.6501) & 5.7667** & (2.6403) & 0.2975*** & (0.0744) \\
+\quad Same Ph.D. & -1.3440 & (2.3326) & -1.5171 & (2.3227) & -0.0601 & (0.1407) \\
+\quad Co-author & 2.7016 & (1.8526) & 2.7789 & (1.8461) & 0.3020* & (0.1828) \\
+\quad Same Field & 4.6627 & (2.8133) & 4.1600 & (2.8394) & 0.0698 & (0.0682) \\[3pt]
+\multicolumn{7}{l}{\textit{C. Number of lead articles}} \\[2pt]
+\quad Pooled & 0.0714 & (0.0487) & 0.0616 & (0.0481) & 0.1018 & (0.0922) \\
+\quad Same Faculty & 0.0921** & (0.0363) & 0.0815** & (0.0367) & 0.1867** & (0.0941) \\
+\quad Ph.D. Advisor & -0.0098 & (0.0280) & -0.0095 & (0.0274) & -0.0215 & (0.3135) \\
+\quad Same Ph.D. & -0.0075 & (0.0226) & -0.0084 & (0.0227) & 0.1719 & (0.4758) \\
+\quad Co-author & 0.0315 & (0.0211) & 0.0279 & (0.0210) & 0.3978 & (0.4623) \\
+\quad Same Field & -0.0199 & (0.0319) & -0.0266 & (0.0317) & -0.0668 & (0.1783) \\
+\bottomrule
+\end{tabular*}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize\textit{Notes:} Estimates from the Python package \texttt{fasthdfe}, with the same fixed effects, clustering and estimation samples as the Stata commands \texttt{reghdfe} and \texttt{ppmlhdfe}. The coefficients equal the Stata ones in every cell (\citeauthor{Colussi2018}'s Table~3, Table~\ref{tab:table3_reghdfe_extended} and Table~\ref{tab:ppml_table3}). The standard errors differ only by the small-sample factor $\sqrt{(N-1)/(N-K)}$, where $K$ counts \texttt{Incharge} and the editor-by-journal effects: for OLS, \texttt{reghdfe} applies it and \texttt{fasthdfe} does not; for PPML, \texttt{fasthdfe} applies it and \texttt{ppmlhdfe} does not. Clustered standard errors in parentheses. Stars use the $p$-values reported by \texttt{fasthdfe}: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\end{minipage}
+\end{table}

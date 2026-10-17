@@ -1,0 +1,60 @@
+\begin{table}[!htbp]
+\renewcommand{\arraystretch}{0.95}
+\centering
+\setstretch{1}
+\caption{Effect of an editor being in charge on the output of tied scholars: original estimates, corrected data with OLS and corrected data with PPML}
+\label{tab:comparison}
+\footnotesize
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccc}
+\toprule
+ & Original & \multicolumn{2}{c}{Corrected data} & \multicolumn{2}{c}{RESET $p$-value} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+ & OLS & OLS & PPML & OLS & PPML \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Number of articles}} \\[2pt]
+\quad Pooled & 5.232* & 5.124* & 5.513* & $<$0.001 & 0.403 \\
+ & (2.971) & (2.928) & (3.236) & & \\
+\quad Same Faculty & 8.146** & 7.780** & 8.718*** & $<$0.001 & 0.717 \\
+ & (3.196) & (3.142) & (3.433) & & \\
+\quad Ph.D. Advisor & 13.833* & 15.234** & 24.434*** & $<$0.001 & 0.309 \\
+ & (7.389) & (7.584) & (7.127) & & \\
+\quad Same Ph.D. & -7.844 & -9.522 & -7.331 & $<$0.001 & 0.319 \\
+ & (10.701) & (10.763) & (10.671) & & \\
+\quad Co-author & 10.970 & 11.961 & 18.985 & $<$0.001 & 0.782 \\
+ & (13.655) & (13.523) & (18.706) & & \\
+\quad Same Field & 4.592 & 5.401 & 4.347 & $<$0.001 & 0.089 \\
+ & (6.016) & (6.048) & (6.190) & & \\[8pt]
+\multicolumn{6}{l}{\textit{B. Number of pages}} \\[2pt]
+\quad Pooled & 8.325** & 7.875** & 8.653** & 0.011 & 0.850 \\
+ & (3.373) & (3.320) & (3.973) & & \\
+\quad Same Faculty & 10.656*** & 10.428*** & 12.224*** & 0.001 & 0.433 \\
+ & (3.574) & (3.548) & (4.034) & & \\
+\quad Ph.D. Advisor & 19.561** & 19.009** & 34.647*** & 0.004 & 0.116 \\
+ & (8.965) & (9.032) & (9.658) & & \\
+\quad Same Ph.D. & -6.893 & -7.781 & -5.833 & $<$0.001 & 0.036 \\
+ & (12.416) & (12.364) & (12.765) & & \\
+\quad Co-author & 21.827 & 22.451 & 35.252* & 0.003 & 0.115 \\
+ & (15.534) & (15.479) & (23.797) & & \\
+\quad Same Field & 10.671 & 9.668 & 7.232 & $<$0.001 & 0.115 \\
+ & (6.682) & (6.849) & (7.050) & & \\[8pt]
+\multicolumn{6}{l}{\textit{C. Number of lead articles}} \\[2pt]
+\quad Pooled & 11.564 & 9.783 & 10.711 & 0.028 & 0.008 \\
+ & (8.181) & (7.939) & (9.828) & & \\
+\quad Same Faculty & 18.747** & 16.027** & 20.530** & 0.066 & $<$0.001 \\
+ & (7.673) & (7.492) & (10.902) & & \\
+\quad Ph.D. Advisor & -8.959 & -8.985 & -2.131 & $<$0.001 & 0.322 \\
+ & (26.677) & (26.999) & (28.805) & & \\
+\quad Same Ph.D. & -10.517 & -12.639 & 18.756 & $<$0.001 & 0.035 \\
+ & (32.767) & (35.555) & (52.057) & & \\
+\quad Co-author & 48.731 & 44.381 & 48.857 & $<$0.001 & 0.882 \\
+ & (33.871) & (34.568) & (63.922) & & \\
+\quad Same Field & -9.048 & -12.026 & -6.465 & $<$0.001 & 0.152 \\
+ & (15.098) & (14.883) & (15.739) & & \\
+\bottomrule
+\end{tabular*}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize\textit{Notes:} Percentage effects of an editor being in charge. Columns (1) and (2) divide the OLS coefficient by the sample mean of the outcome, as in \citet{Colussi2018}, on his files and on the corrected data. Column (3) is $100[\exp(\hat\beta)-1]$ from Table~\ref{tab:ppml_table3}. Columns (4) and (5) are RESET $p$-values for the OLS and PPML models on the corrected data. Standard errors clustered by journal and half-year term in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\end{minipage}
+\end{table}

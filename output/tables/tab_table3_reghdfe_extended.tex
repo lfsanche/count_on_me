@@ -1,0 +1,33 @@
+\begin{table}[!htbp]
+\renewcommand{\arraystretch}{1.0}
+\centering
+\setstretch{1}
+\caption{Social ties and publication outcomes on the corrected data: a narrow replication of \citeauthor{Colussi2018}'s \citeyearpar[p.~49]{Colussi2018} Table~3}
+\label{tab:table3_reghdfe_extended}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & Pooled & Same Faculty & Ph.D. Advisor & Same Ph.D. & Co-author & Same Field \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Number of articles}} \\[2pt]
+\quad Incharge & 0.2383* & 0.2571** & 0.1604** & -0.0691 & 0.0504 & 0.0829 \\
+ & (0.1362) & (0.1038) & (0.0798) & (0.0782) & (0.0570) & (0.0929) \\[3pt]
+\multicolumn{7}{l}{\textit{B. Number of pages}} \\[2pt]
+\quad Incharge & 10.3960** & 10.0242*** & 5.7667** & -1.5171 & 2.7789 & 4.1600 \\
+ & (4.3830) & (3.4111) & (2.7401) & (2.4106) & (1.9159) & (2.9468) \\[3pt]
+\multicolumn{7}{l}{\textit{C. Number of lead articles}} \\[2pt]
+\quad Incharge & 0.0616 & 0.0815** & -0.0095 & -0.0084 & 0.0279 & -0.0266 \\
+ & (0.0500) & (0.0381) & (0.0285) & (0.0236) & (0.0218) & (0.0329) \\
+\midrule
+Editor $\times$ Journal FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Journal $\times$ Term FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Observations & 588 & 588 & 588 & 588 & 588 & 588 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize\textit{Notes:} Each cell is the \texttt{Incharge} coefficient of a separate OLS regression (\texttt{reghdfe}) on the corrected data, with the outcome in its original units: articles (Panel~A), pages (Panel~B) or lead articles (Panel~C) per editor and term, written by scholars tied to the editor through the channel in the column header. All specifications absorb editor-by-journal and journal-by-term fixed effects. Standard errors clustered by journal and half-year term (56 clusters) are in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\end{minipage}
+\end{table}

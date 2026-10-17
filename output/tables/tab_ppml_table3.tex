@@ -1,0 +1,44 @@
+\begin{table}[!htbp]
+\renewcommand{\arraystretch}{1.0}
+\centering
+\setstretch{1}
+\caption{Social ties and publication outcomes: Poisson pseudo-maximum-likelihood estimates of \citeauthor{Colussi2018}'s \citeyearpar[p.~49]{Colussi2018} Table~3 on the corrected data}
+\label{tab:ppml_table3}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & Pooled & Same Faculty & Ph.D. Advisor & Same Ph.D. & Co-author & Same Field \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Number of articles}} \\[2pt]
+\quad PPML coefficient, $\hat\beta$ & 0.0537* & 0.0836*** & 0.2186*** & -0.0761 & 0.1738 & 0.0426 \\
+ & (0.0307) & (0.0316) & (0.0573) & (0.1151) & (0.1572) & (0.0593) \\
+\quad $100[\exp(\hat\beta)-1]$ & 5.513* & 8.718*** & 24.434*** & -7.331 & 18.985 & 4.347 \\
+ & (3.236) & (3.433) & (7.127) & (10.671) & (18.706) & (6.190) \\
+\quad Observations & 588 & 588 & 560 & 560 & 544 & 588 \\
+\quad Editors & 42 & 42 & 40 & 40 & 40 & 42 \\[8pt]
+\multicolumn{7}{l}{\textit{B. Number of pages}} \\[2pt]
+\quad PPML coefficient, $\hat\beta$ & 0.0830** & 0.1153*** & 0.2975*** & -0.0601 & 0.3020* & 0.0698 \\
+ & (0.0366) & (0.0359) & (0.0717) & (0.1356) & (0.1759) & (0.0657) \\
+\quad $100[\exp(\hat\beta)-1]$ & 8.653** & 12.224*** & 34.647*** & -5.833 & 35.252* & 7.232 \\
+ & (3.973) & (4.034) & (9.658) & (12.765) & (23.797) & (7.050) \\
+\quad Observations & 588 & 588 & 560 & 560 & 544 & 588 \\
+\quad Editors & 42 & 42 & 40 & 40 & 40 & 42 \\[8pt]
+\multicolumn{7}{l}{\textit{C. Number of lead articles}} \\[2pt]
+\quad PPML coefficient, $\hat\beta$ & 0.1018 & 0.1867** & -0.0215 & 0.1719 & 0.3978 & -0.0668 \\
+ & (0.0888) & (0.0905) & (0.2943) & (0.4384) & (0.4294) & (0.1683) \\
+\quad $100[\exp(\hat\beta)-1]$ & 10.711 & 20.530** & -2.131 & 18.756 & 48.857 & -6.465 \\
+ & (9.828) & (10.902) & (28.805) & (52.057) & (63.922) & (15.739) \\
+\quad Observations & 552 & 513 & 245 & 120 & 154 & 347 \\
+\quad Editors & 40 & 39 & 29 & 18 & 21 & 38 \\
+\midrule
+Editor $\times$ Journal FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Journal $\times$ Term FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize\textit{Notes:} PPML estimates (\texttt{ppmlhdfe}) on the corrected data, with editor-by-journal and journal-by-term fixed effects. Both rows come from the same regression: $\hat\beta$ is the coefficient on \texttt{Incharge} and $100[\exp(\hat\beta)-1]$ the percentage effect, with a delta-method standard error. ``Observations'' and ``Editors'' give the sample after separated observations are dropped. Standard errors clustered by journal and half-year term in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\end{minipage}
+\end{table}

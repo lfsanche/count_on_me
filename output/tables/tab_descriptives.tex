@@ -1,0 +1,36 @@
+\begin{table}[!htbp]
+\renewcommand{\arraystretch}{1.25}
+\centering
+\setstretch{1}
+\caption{Articles' characteristics in the original and corrected data}
+\label{tab:descriptives}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccccc}
+\toprule
+ & \multicolumn{2}{c}{All} & \multicolumn{2}{c}{AER} & \multicolumn{2}{c}{ECA} & \multicolumn{2}{c}{JPE} & \multicolumn{2}{c}{QJE} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}
+ & Orig. & Corr. & Orig. & Corr. & Orig. & Corr. & Orig. & Corr. & Orig. & Corr. \\
+\midrule
+Articles & 1,620 & 1,628 & 603 & 605 & 429 & 431 & 306 & 308 & 282 & 284 \\
+Pages & 25.92 & 25.75 & 17.89 & 17.54 & 27.23 & 27.18 & 29.87 & 29.73 & 36.78 & 36.75 \\
+Citations (8 years) & 57.69 & 57.57 & 56.69 & 56.67 & 47.60 & 47.52 & 50.26 & 49.97 & 83.26 & 82.96 \\
+Authors & 1.95 & 1.95 & 1.94 & 1.94 & 1.92 & 1.91 & 1.94 & 1.94 & 2.03 & 2.04 \\
+Single author (\%) & 29.32 & 29.30 & 29.35 & 29.26 & 30.77 & 30.86 & 29.74 & 29.87 & 26.60 & 26.41 \\
+\multicolumn{11}{l}{\textit{References}} \\
+\quad Number & 32.95 & 32.89 & 32.05 & 31.99 & 29.77 & 29.72 & 31.25 & 31.12 & 41.60 & 41.60 \\
+\quad Same journal (\%) & 10.80 & 10.75 & 9.73 & 9.70 & 16.49 & 16.41 & 8.29 & 8.23 & 7.16 & 7.11 \\
+\quad Editor cited (\%) & 47.47 & 47.60 & 47.76 & 47.93 & 40.56 & 40.60 & 45.42 & 45.78 & 59.57 & 59.51 \\
+\multicolumn{11}{l}{\textit{Connected papers (\%)}} \\
+\quad Same Ph.D. & 10.25 & 10.20 & 9.45 & 9.42 & 8.16 & 8.12 & 9.80 & 9.74 & 15.60 & 15.49 \\
+\quad Ph.D. Advisor & 14.75 & 14.68 & 11.61 & 11.57 & 15.15 & 15.08 & 14.71 & 14.61 & 20.92 & 20.77 \\
+\quad Same Faculty & 28.83 & 28.81 & 25.04 & 24.96 & 32.87 & 32.95 & 32.03 & 32.14 & 27.30 & 27.11 \\
+\quad Co-author & 7.65 & 7.62 & 5.31 & 5.29 & 8.39 & 8.35 & 7.52 & 7.47 & 11.70 & 11.62 \\
+\quad Pooled & 42.72 & 42.63 & 37.15 & 37.02 & 45.22 & 45.24 & 44.12 & 44.16 & 49.29 & 48.94 \\
+\bottomrule
+\end{tabular*}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize\textit{Notes:} ``Orig.'' reproduces \citeauthor{Colussi2018}'s \citeyearpar[p.~46]{Colussi2018} Table~1 from his replication files; ``Corr.'' applies the same code to the corrected data (eight recovered articles, eight added authors and 19 bibliographic corrections). Pages are last minus first page. ``Same journal'' is the share of an article's references published in the same journal; ``Editor cited'' is the share of articles flagged as citing an editor in charge by the original code. An article is connected if at least one author has the tie with an editor in charge at publication. 
+\end{minipage}
+\end{table}
