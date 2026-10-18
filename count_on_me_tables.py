@@ -109,13 +109,13 @@ def tex_descriptives(orig, corr):
     h.append('\\begin{minipage}{\\linewidth}')
     h.append('\\vspace{4pt}')
     h.append('\\footnotesize\\textit{Notes:} ``Orig.\'\' reproduces \\citeauthor{Colussi2018}\'s '
-             '\\citeyearpar[p.~46]{Colussi2018} Table~1 from his replication files; ``Corr.\'\' applies the same code '
+             '\\citeyearpar[p. 46]{Colussi2018} Table 1 from his replication files; ``Corr.\'\' applies the same code '
              'to the corrected data (eight recovered articles, eight added authors and 19 bibliographic corrections). '
              'Pages are last minus first page. '
              '``Same journal\'\' is the share of an article\'s references published in the same journal; '
              '``Editor cited\'\' is the share of articles flagged as citing an editor in charge by the original code. '
              'An article is connected if at least one author has the tie with an editor in charge at publication. '
-             )
+             'Sample averages reported for ``Pages,\'\' ``Citations (8 years),\'\' ``authors,\'\' and ``Number.\'\'')
     h.append('\\end{minipage}')
     h.append('\\end{table}')
     return '\n'.join(h)
@@ -129,7 +129,7 @@ def tex_ppml_table3(pp):
     h.append('\\centering')
     h.append('\\setstretch{1}')
     h.append('\\caption{Social ties and publication outcomes: Poisson pseudo-maximum-likelihood estimates of '
-             '\\citeauthor{Colussi2018}\'s \\citeyearpar[p.~49]{Colussi2018} Table~3 on the corrected data}')
+             '\\citeauthor{Colussi2018}\'s \\citeyearpar[p. 49]{Colussi2018} Table 3 on the corrected data}')
     h.append('\\label{tab:ppml_table3}')
     h.append('\\small')
     h.append('\\setlength{\\tabcolsep}{3pt}')
@@ -208,7 +208,7 @@ def tex_comparison(ols_o, ols_c, pp, reset, ybar_o, ybar_c, reset_ols):
     h.append('\\vspace{4pt}')
     h.append('\\footnotesize\\textit{Notes:} Percentage effects of an editor being in charge. Columns (1) and (2) divide the '
              'OLS coefficient by the sample mean of the outcome, as in \\citet{Colussi2018}, on his files and on the corrected data. '
-             'Column (3) is $100[\\exp(\\hat\\beta)-1]$ from Table~\\ref{tab:ppml_table3}. Columns (4) and (5) are RESET $p$-values '
+             'Column (3) is $100[\\exp(\\hat\\beta)-1]$ from Table \\ref{tab:ppml_table3}. Columns (4) and (5) are RESET $p$-values '
              'for the OLS and PPML models on the corrected data. Standard errors clustered by journal and half-year term '
              'in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$.')
     h.append('\\end{minipage}')
@@ -223,7 +223,7 @@ def tex_ols_levels(ols_c):
     h.append('\\centering')
     h.append('\\setstretch{1}')
     h.append('\\caption{Social ties and publication outcomes on the corrected data: a narrow replication of '
-             '\\citeauthor{Colussi2018}\'s \\citeyearpar[p.~49]{Colussi2018} Table~3}')
+             '\\citeauthor{Colussi2018}\'s \\citeyearpar[p. 49]{Colussi2018} Table 3}')
     h.append('\\label{tab:table3_reghdfe_extended}')
     h.append('\\small')
     h.append('\\setlength{\\tabcolsep}{3pt}')
@@ -246,8 +246,8 @@ def tex_ols_levels(ols_c):
     h.append('\\begin{minipage}{\\linewidth}')
     h.append('\\vspace{4pt}')
     h.append('\\footnotesize\\textit{Notes:} Each cell is the \\texttt{Incharge} coefficient of a separate OLS regression '
-             '(\\texttt{reghdfe}) on the corrected data, with the outcome in its original units: articles (Panel~A), '
-             'pages (Panel~B) or lead articles (Panel~C) per editor and term, written by scholars tied to the editor '
+             '(\\texttt{reghdfe}) on the corrected data, with the outcome in its original units: articles (Panel A), '
+             'pages (Panel B) or lead articles (Panel C) per editor and term, written by scholars tied to the editor '
              'through the channel in the column header. All specifications absorb editor-by-journal and journal-by-term '
              'fixed effects. Standard errors clustered by journal and half-year term (56 clusters) are in parentheses. '
              '*** $p<0.01$, ** $p<0.05$, * $p<0.1$.')
@@ -301,7 +301,7 @@ def tex_python(py):
          '\\begin{tabular*}{\\linewidth}{@{\\extracolsep{\\fill}}l' + 'cc' * 3 + '}', '\\toprule',
          ' & ' + ' & '.join(f'\\multicolumn{{2}}{{c}}{{{bl}}}' for _, bl in blocks) + ' \\\\',
          '\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}',
-         ' & ' + ' & '.join(['$\\hat\\beta$', 's.e.'] * 3) + ' \\\\', '\\midrule']
+         ' & ' + ' & '.join(['$\\widehat{\\beta}^\\ast$', 's.e.'] * 3) + ' \\\\', '\\midrule']
     for i, (o, ol) in enumerate(OUTS):
         h.append(f'\\multicolumn{{7}}{{l}}{{\\textit{{{"ABC"[i]}. {ol}}}}} \\\\[2pt]')
         for t, l in zip(TIES, LABELS):
@@ -310,12 +310,12 @@ def tex_python(py):
             h[-1] += '[3pt]'
     h += ['\\bottomrule', '\\end{tabular*}', '\\begin{minipage}{\\linewidth}', '\\vspace{4pt}',
           '\\footnotesize\\textit{Notes:} Estimates from the Python package \\texttt{fasthdfe}, with the same fixed effects, '
-          'clustering and estimation samples as the Stata commands \\texttt{reghdfe} and \\texttt{ppmlhdfe}. The coefficients '
-          'equal the Stata ones in every cell (\\citeauthor{Colussi2018}\'s Table~3, Table~\\ref{tab:table3_reghdfe_extended} '
-          'and Table~\\ref{tab:ppml_table3}). The standard errors differ only by the small-sample factor '
+          'clustering and estimation samples as the Stata commands \\texttt{reghdfe} and \\texttt{ppmlhdfe}. The estimated coefficients '
+          '($\\widehat{\\beta}^\\ast$) equal the Stata ones in every cell (\\citeauthor{Colussi2018}\'s Table 3, Table \\ref{tab:table3_reghdfe_extended} '
+          'and Table \\ref{tab:ppml_table3}). The standard errors differ only by the small-sample factor '
           '$\\sqrt{(N-1)/(N-K)}$, where $K$ counts \\texttt{Incharge} and the editor-by-journal effects: for OLS, '
           '\\texttt{reghdfe} applies it and \\texttt{fasthdfe} does not; for PPML, \\texttt{fasthdfe} applies it and '
-          '\\texttt{ppmlhdfe} does not. Clustered standard errors in parentheses. Stars use the $p$-values reported by \\texttt{fasthdfe}: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.',
+          '\\texttt{ppmlhdfe} does not. Clustered standard errors (s.e.) in parentheses. Stars use the $p$-values reported by \\texttt{fasthdfe}: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.',
           '\\end{minipage}', '\\end{table}']
     return '\n'.join(h)
 
@@ -410,10 +410,10 @@ def _tex_inline(x):
     x = re.sub(r'\\citeyearpar\{(\w+)\}', lambda m: f'({cite(m.group(1))[1]})', x)
     x = re.sub(r'\\citet\{(\w+)\}', lambda m: f'{cite(m.group(1))[0]} ({cite(m.group(1))[1]})', x)
     x = re.sub(r'\\citep\{([\w, ]+)\}', lambda m: '(' + '; '.join(', '.join(cite(k.strip())) for k in m.group(1).split(',')) + ')', x)
-    x = re.sub(r'Table~\\ref\{tab:(\w+)\}', lambda m: {'ppml_table3': 'Table 2', 'comparison': 'Table 3',
+    x = re.sub(r'Table[~ ]\\ref\{tab:(\w+)\}', lambda m: {'ppml_table3': 'Table 2', 'comparison': 'Table 3',
                'table3_reghdfe_extended': 'Table B-1', 'descriptives': 'Table 1', 'python': 'Table C-1',
                'corrections': 'Table A-3'}.get(m.group(1), 'Table'), x)
-    rep = [('$<$', '&lt;'), ('\\hat\\beta', 'β̂'), ('\\beta', 'β'), ('\\exp', 'exp'), ('\\times', '×'),
+    rep = [('$<$', '&lt;'), ('\\widehat{\\beta}^\\ast', 'β̂*'), ('\\hat\\beta', 'β̂'), ('\\beta', 'β'), ('\\exp', 'exp'), ('\\times', '×'),
            ('\\mathrm{se}', 'se'), ('\\mid', '|'), ('\\,', ' '), ('\\%', '%'), ('~', ' '), ('``', '“'), ("''", '”'),
            ('\\quad ', '&emsp;'), ('\\ ', ' '), ('_{ijt}', '<sub>ijt</sub>'), ("x_{ijt}'", "x<sub>ijt</sub>′")]
     for a, b in rep:
