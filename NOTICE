@@ -1,0 +1,11 @@
+count_on_me
+Copyright 2026 Kim P. Huynh, David T. Jacho-Chávez and Leonardo Sánchez-Aragón
+
+This product includes software developed by the authors above and licensed
+under the Apache License, Version 2.0 (see LICENSE).
+
+The files in data/original/ are the replication files of Colussi, T. (2018),
+"Social Ties in Academia: A Friend Is a Treasure", Review of Economics and
+Statistics 100(1): 45-50. They are redistributed here only to reproduce the
+paper, and they remain under the terms set by their author and the journal.
+The files in data/corrected/ are derived from them.

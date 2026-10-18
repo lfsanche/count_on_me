@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "count_on_me: data and code for Count on Me? A Replication of 'Social Ties in Academia: A Friend Is a Treasure'"
+license: Apache-2.0
+repository-code: "https://github.com/lfsanche/count_on_me"
+authors:
+  - family-names: Huynh
+    given-names: Kim P.
+    affiliation: "Indiana University; Université d'Orléans"
+  - family-names: Jacho-Chávez
+    given-names: David T.
+    affiliation: "Emory University"
+  - family-names: Sánchez-Aragón
+    given-names: Leonardo
+    affiliation: "Escuela Superior Politécnica del Litoral (ESPOL)"
+keywords:
+  - replication
+  - economics
+  - poisson-pseudo-maximum-likelihood
+  - stata
+  - python
+preferred-citation:
+  type: unpublished
+  title: "Count on Me? A Replication of 'Social Ties in Academia: A Friend Is a Treasure'"
+  authors:
+    - family-names: Huynh
+      given-names: Kim P.
+    - family-names: Jacho-Chávez
+      given-names: David T.
+    - family-names: Sánchez-Aragón
+      given-names: Leonardo
+  year: 2026
+  notes: "Unpublished manuscript. Data and code at https://github.com/lfsanche/count_on_me"
