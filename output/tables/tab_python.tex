@@ -9,7 +9,7 @@
 \toprule
  & \multicolumn{2}{c}{OLS, original data} & \multicolumn{2}{c}{OLS, corrected data} & \multicolumn{2}{c}{PPML, corrected data} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
- & $\hat\beta$ & s.e. & $\hat\beta$ & s.e. & $\hat\beta$ & s.e. \\
+ & $\widehat{\beta}^\ast$ & s.e. & $\widehat{\beta}^\ast$ & s.e. & $\widehat{\beta}^\ast$ & s.e. \\
 \midrule
 \multicolumn{7}{l}{\textit{A. Number of articles}} \\[2pt]
 \quad Pooled & 0.2419* & (0.1324) & 0.2383* & (0.1312) & 0.0537* & (0.0318) \\
@@ -36,6 +36,6 @@
 \end{tabular*}
 \begin{minipage}{\linewidth}
 \vspace{4pt}
-\footnotesize\textit{Notes:} Estimates from the Python package \texttt{fasthdfe}, with the same fixed effects, clustering and estimation samples as the Stata commands \texttt{reghdfe} and \texttt{ppmlhdfe}. The coefficients equal the Stata ones in every cell (\citeauthor{Colussi2018}'s Table~3, Table~\ref{tab:table3_reghdfe_extended} and Table~\ref{tab:ppml_table3}). The standard errors differ only by the small-sample factor $\sqrt{(N-1)/(N-K)}$, where $K$ counts \texttt{Incharge} and the editor-by-journal effects: for OLS, \texttt{reghdfe} applies it and \texttt{fasthdfe} does not; for PPML, \texttt{fasthdfe} applies it and \texttt{ppmlhdfe} does not. Clustered standard errors in parentheses. Stars use the $p$-values reported by \texttt{fasthdfe}: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\footnotesize\textit{Notes:} Estimates from the Python package \texttt{fasthdfe}, with the same fixed effects, clustering and estimation samples as the Stata commands \texttt{reghdfe} and \texttt{ppmlhdfe}. The estimated coefficients ($\widehat{\beta}^\ast$) equal the Stata ones in every cell (\citeauthor{Colussi2018}'s Table 3, Table \ref{tab:table3_reghdfe_extended} and Table \ref{tab:ppml_table3}). The standard errors differ only by the small-sample factor $\sqrt{(N-1)/(N-K)}$, where $K$ counts \texttt{Incharge} and the editor-by-journal effects: for OLS, \texttt{reghdfe} applies it and \texttt{fasthdfe} does not; for PPML, \texttt{fasthdfe} applies it and \texttt{ppmlhdfe} does not. Clustered standard errors (s.e.) in parentheses. Stars use the $p$-values reported by \texttt{fasthdfe}: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
 \end{minipage}
 \end{table}
